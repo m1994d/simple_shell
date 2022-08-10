@@ -10,6 +10,7 @@ The holbertonstudents-simple_shell program is a recreation of the shell as part 
 By
 ###### Marlon Andres Diaz 
 ###### Marlon Amado
+###### Daniel Lopez
 
 This site was built for a project of [Holberton School Col](https://www.holbertoncolombia.com/).
 
