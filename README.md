@@ -1,4 +1,4 @@
-simple_shell project in progress
+simple_shell project in progress `rgb(R,G,B)`
 
 The holbertonstudents-simple_shell program is a recreation of the shell as part of the assignments at the Holberton Colombia School.
 
