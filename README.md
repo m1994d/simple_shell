@@ -1,4 +1,4 @@
-`#RRGGBB simple_shell project in progress`
+``#RRGGBB` simple_shell project in progress`
 
 The holbertonstudents-simple_shell program is a recreation of the shell as part of the assignments at the Holberton Colombia School.
 
