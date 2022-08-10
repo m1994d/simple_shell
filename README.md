@@ -1,7 +1,8 @@
 simple_shell project in progress
 
 
-![145311672-53ee1362-943a-4a60-896b-08057bfcdcfe](https://user-images.githubusercontent.com/98677728/184030141-f63e03e4-c677-40b9-b6aa-6636b7f055ed.png)
+![single linked lists](https://user-images.githubusercontent.com/98677728/184030218-6cef42d7-9d3f-47a9-ba94-214eea94f85a.jpg)
+
 
 
 By:
