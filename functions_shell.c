@@ -5,7 +5,6 @@
  * @s: Pointer to string to measure
  * Return: Lenght of the string
  */
-
 int _strlen(char *s)
 {
 	int i;
@@ -23,7 +22,7 @@ int _strlen(char *s)
 	return (len);
 }
 
-/*
+/**
  * _strcpy - copies the string pointed to by src, including the terminating
  * null byte (\0), to the buffer pointed to by dest.
  * @dest: Pointer to destiny
@@ -41,7 +40,3 @@ char *_strcpy(char *dest, char *src)
 		*(dest + i) = *(src + i);
 	return (dest);
 }
-
-/*
-
-*/
