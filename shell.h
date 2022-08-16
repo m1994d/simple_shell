@@ -2,7 +2,9 @@
 #define SHELL_H
 #define _GNU_SOURCE
 
-/* libraries */
+/*
+ * libraries 
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,7 +15,9 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 
-/* functions */
+/*
+ * functions 
+ */
 
 int init_shell(char *prompt, char *error, size_t aux);
 int linetoargv(char *line, char **argv, ssize_t linelen);
@@ -26,7 +30,9 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 void env_builtin(void);
 extern char **environ;
 
-/* functions */
+/* 
+ * functions 
+ */
 
 #define ISATTYOUT \
 do {\
