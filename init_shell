@@ -3,6 +3,11 @@
 
 /**
  * init_shell - Fuction to execute simple shell
+ * @prompt: Prompt to print
+ * @sh_command: command used to execute the shell
+ * @aux: Auxiliar size_t to getline
+ * Return: 0 on success execution, 1 on malloc failure
+ */
 
  int init_shell(char *prompt, char *sh_command, size_t aux)
  {
