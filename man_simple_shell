@@ -1,0 +1,30 @@
+.\" Manpage for simple_shell .hsh
+.\" Contact 4718@holbertonstudents.com or daniel.saloo@hotmail.com to correct errors.
+.\" Contact 4740@holbertonstudents.com  to correct errors.
+.TH shell 1 "August 19, 2022" "Holberton School - C" "shell man page"
+.SH NAME
+holbertonschool-simple_shell to emulate the basics sh shell.
+.B hsh \- a custom command language interpreter
+.SH SYNOPSIS
+.B ./hsh [command_file] [argument...]
+.SH DESCRIPTION
+The hsh utilitiy is a command language interpreter that executes commands read from a command 
+line string, the standard input, or a specified file.
+.SH INVOCATION
+Compile simple_shell with the GNU Compiler Collection, preferably using gcc plus the below 
+specified flags, as per this example (note the use of the * wildcard which enables all related .c files to be compiled concurrently):
+.B $ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+Interactive mode
+.B $ ./hsh
+Non interactive mode
+.B echo 'pwd' | ./hsh
+.SH BUILTINS
+The following builtin commands are supported:
+.B 2. exit - exits shell.
+.B 3. cd - changes directory.
+.B 4. env - sifts environment
+.BR PWD
+This variable represents an absolute pathname of the current working directory.
+.SH EXTENDED DESCRIPTION
+
+.SH EXIT STATUS
