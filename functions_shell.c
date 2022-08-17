@@ -24,7 +24,7 @@ int _strlen(char *s)
 }
 
 /**
- * _strcpy - this copies the string pointed to by src, including the null byte (\0)
+ *_strcpy - this copies the string pointed to by src, including the null byte (\0)
  * null byte (\0), to the buffer pointed to by dest.
  * @dest: a pointer to the destination.
  * @src: a pointer to the origin.
@@ -94,7 +94,7 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- * count_words - Count the words in each string, and the words are separated by spaces.
+ *count_words - Count the words in each string, and the words are separated by spaces.
  * @s: is a string to count words.
  * Return: Number of words
  */
