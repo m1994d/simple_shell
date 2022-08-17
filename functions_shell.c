@@ -94,7 +94,7 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- *count_words -Count the words in each string,the words are separated by spaces.
+ *count_words-Count the words in each string,the words are separated by spaces.
  * @s: is a string to count words.
  * Return: Number of words
  */
