@@ -1,115 +1,106 @@
-#include "shell.h"
+#include "my_shell.h"
 
 /**
- * _strlen - this returns the length of a string.
- * @s: a Pointer to the string to measure.
- * Return: to the length of the string.
+ * _strlen - returns the length of a string.
+ * @str: pointer to String
+ * Return: Nothing
  */
-
-int _strlen(char *s)
+int _strlen(const char *str)
 {
-	int i;
-	int len;
+	int count = 0;
 
-	i = 0;
-	len = 0;
-	if (!s)
-		return (len);
-	while (*(s + i) != '\0')
+	if (!str)
+		return (count);
+
+	while (str[count])
+		count++;
+
+	return (count);
+}
+/**
+ * _strconcat - function that concatenates strings
+ * @s1: string to concatenate
+ * @s2: string to concatenate
+ * @s3: string to concatenate
+ * Return: the string result of the concatenate
+ */
+char *_strconcat(char *s1, char *s2, char *s3)
+{
+	char *pstr = NULL;
+	unsigned int len, i = 0, current = 0;
+	unsigned int x = 0, y = 0, z = 0;
+
+	s1 = s1 ? s1 : EMPTY_STR;
+	s2 = s2 ? s2 : EMPTY_STR;
+	s3 = s3 ? s3 : EMPTY_STR;
+
+	x = _strlen(s1), y = _strlen(s2), z = _strlen(s3);
+
+	len = x + y + z;
+	if (len == 0)
+		return (NULL);
+
+	pstr = malloc(sizeof(char) * (len + 1));
+
+	if (pstr == NULL)
+		return (NULL);
+
+	for (current = 0; current < x; current++)
+		pstr[current] = s1[current];
+	for (i = 0; i < y; current++, i++)
+		pstr[current] = s2[i];
+	for (i = 0; i < z; current++, i++)
+		pstr[current] = s3[i];
+
+	pstr[current] = '\0';
+		return (pstr);
+}
+
+/**
+ * _strdup - to duplicate a string
+ * @str: string to duplicate
+ * Return: the duplicate.
+ */
+char *_strdup(char *str)
+{
+	char *dup, *j;
+	int len = 0;
+
+	if (str == NULL)
+		return (NULL);
+
+	len = _strlen(str);
+
+	dup = malloc(len + 1);
+	j = dup;
+
+	if (j == NULL)
+		return (NULL);
+
+	while (*str)
 	{
-		len = len + 1;
-		i++;
+		*j++ = *str++;
+		*j = '\0';
 	}
-	return (len);
+	return (dup);
 }
 
 /**
- *_strcpy -copies the string pointed to by src, including the null byte
- * null byte (\0), to the buffer pointed to by dest.
- * @dest: a pointer to the destination.
- * @src: a pointer to the origin.
- * Return: Pointer to dest
+ * _strcmp - compare two strings.
+ * @s1: accepts destination string.
+ * @s2: accepts source string.
+ * Return: pointer to the destination string.
  */
-
-char *_strcpy(char *dest, char *src)
-{
-	int len;
-	int i;
-
-	len = _strlen(src);
-	for (i = 0; i <= len; i++)
-		*(dest + i) = *(src + i);
-	return (dest);
-}
-
-/**
- * _strcat - this concatenates two strings.
- * @dest: a pointer to the destination string.
- * @src: a Pointer to the source string
- * Return: a Pointer to the resulting string dest
- */
-
-char *_strcat(char *dest, char *src)
-{
-	int lendest;
-	int lensrc;
-	int lenfdest;
-	int i;
-
-	lendest = _strlen(dest);
-	lensrc = _strlen(src);
-	lenfdest = lendest + lensrc;
-	i = 0;
-	while (lendest <= lenfdest)
-	{
-		*(dest + lendest) = *(src + i);
-		lendest++;
-		i++;
-	}
-	return (dest);
-}
-
-/**
- * _strcmp - this compares 2 strings
- * @s1: a Pointer to the first string
- * @s2: a Pointer to the second string
- * Return: to the difference between the first 2 different ASCII characters
- */
-
 int _strcmp(char *s1, char *s2)
 {
 	int i;
-	int ret;
 
-	ret = 0;
-	for (i = 0 ; *(s1 + i) != '\0' ; i++)
+	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
 	{
-		if (*(s1 + i) != *(s2 + i))
+		if (s1[i] != s2[i])
 		{
-			ret = *(s1 + i) - *(s2 + i);
-			break;
+			return (s1[i] - s2[i]);
 		}
 	}
-	return (ret);
-}
-
-/**
- *count_words-Count the words in each string,the words are separated by spaces.
- * @s: is a string to count words.
- * Return: Number of words
- */
-
-int count_words(char *s)
-{
-	int ret, i;
-
-	ret = 0;
-	if (s == NULL)
-		return (ret);
-	for (i = 0; s[i]; i++)
-	{
-		if (s[i] == ' ' || s[i] == '	')
-			ret++;
-	}
-	return (ret);
+	return (0);
 }
