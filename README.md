@@ -10,6 +10,7 @@ The holbertonstudents-simple_shell program is a recreation of the shell as part 
 <h2> USAGE </h2>
 
 To use the simple_shell, compile all .c files in the repository. 
+
 `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
 
 Then execute the resulting file,for following explanations, the executable file will be referred as hsh. 
