@@ -45,5 +45,7 @@
 			FREEWRITE(line, argv, errorline);
 		ISATTYOUT;
 	}
+	free(line);
+	return (0);
  }
 
