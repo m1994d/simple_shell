@@ -1,1 +1,19 @@
 #include "shell.h"
+
+
+/**
+ * init_shell - Fuction to execute simple shell
+
+ int init_shell(char *prompt, char *sh_command, size_t aux)
+ {
+ 	char **argv, *errorline, *line = NULL;
+	pid_t child_pid;
+	ssize_t linelen = 0;
+	int status, argvst, argc = 0;
+
+	while (1)
+	{
+
+	}
+ }
+
