@@ -3,7 +3,7 @@
 #define _GNU_SOURCE
 
 /*
- * libraries 
+ * libraries
  */
 
 #include <stdio.h>
@@ -16,7 +16,7 @@
 #include <sys/wait.h>
 
 /*
- * functions 
+ * functions
  */
 
 int init_shell(char *prompt, char *error, size_t aux);
@@ -30,8 +30,8 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 void env_builtin(void);
 extern char **environ;
 
-/* 
- * functions 
+/*
+ * functions
  */
 
 #define ISATTYOUT \
@@ -45,7 +45,6 @@ do {\
 	if (isatty(0) == 1)\
 		write(STDOUT_FILENO, (PROMPT), (LEN));\
 } while (0)
-
 
 
 
