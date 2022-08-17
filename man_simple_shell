@@ -1,6 +1,6 @@
 .\" Manpage for simple_shell .hsh
 .\" Contact 4718@holbertonstudents.com or daniel.saloo@hotmail.com to correct errors.
-.TH shell 1 "April 19, 2022" "Holberton School 0x16 - C" "shell man page"
+.TH shell 1 "April 19, 2022" "Holberton School - C" "shell man page"
 .SH NAME
 holbertonschool-simple_shell to emulate the basics sh shell.
 .B hsh \- a custom command language interpreter
