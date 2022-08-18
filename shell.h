@@ -1,72 +1,45 @@
-#ifndef SHELL_H
-#define SHELL_H
-#define _GNU_SOURCE
-
-/*
- * libraries
- */
-
-#include <stdio.h>
+#ifndef MY_SHELL
+#define MY_SHELL
 #include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
+#include <wait.h>
 #include <unistd.h>
-#include <errno.h>
-#include <sys/types.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <string.h>
 #include <sys/stat.h>
-#include <sys/wait.h>
+#include <stdarg.h>
 
-/*
- * functions
+#define EMPTY_STR ""
+
+/**
+ * struct SLL - structure to manage the shell
+ * @flags: arguments
+ * @Command: parameter command
+ * @num_flags: number of arguments
  */
+typedef struct SLL
+{
+	char *Command;
+	char **flags;
+	int num_flags;
+} sll_t;
 
-int init_shell(char *prompt, char *error, size_t aux);
-int linetoargv(char *line, char **argv, ssize_t linelen);
-int _strlen(char *s);
-char *_strcpy(char *dest, char *src);
-char *_strcat(char *dest, char *src);
+void ALLfree(sll_t *sll);
+int flagsCOUNT(char *input);
+sll_t *new_sll(int num_flags);
+sll_t *parse_sll(char *input);
+void new_signal_handler(int pid __attribute__((unused)));
+char *getpath_sll(sll_t *sll, char *envPath);
+int nobuilt_in(sll_t *sll, char *CommandPath);
+int built_in(sll_t *sll, char **envs);
+int look_char(sll_t *sll);
+int look_char(sll_t *sll);
+void GETline(char **line);
+
+int _strlen(const char *str);
+char *_strconcat(char *s1, char *s2, char *s3);
+char *_strdup(char *str);
 int _strcmp(char *s1, char *s2);
-int count_words(char *s);
-void *_calloc(unsigned int nmemb, unsigned int size);
-void env_builtin(void);
-extern char **environ;
-
-/*
- * MACROS
- */
-
-#define ISATTYOUT \
-do {\
-	if (isatty(0) == 0)\
-		break;\
-} while (0)
-
-#define ISATTYPROMPT(PROMPT, LEN) \
-do {\
-	if (isatty(0) == 1)\
-		write(STDOUT_FILENO, (PROMPT), (LEN));\
-} while (0)
-
-#define FREEWRITE(LINE, ARGV, ERRORLINE) \
-do {\
-	write(STDERR_FILENO, ERRORLINE, _strlen(ERRORLINE));\
-	free(ERRORLINE);\
-	free(ARGV);\
-	free(LINE);\
-} while (0)
-
-#define FREELAR(LINE, ARST, ARZ, AR, ERRORLINE) \
-do {\
-	free(LINE);\
-	if (ARST == 1)\
-		free(ARZ);\
-	free(AR);\
-	free(ERRORLINE);\
-} while (0)
-
-#define ISATTY(N)\
-do {\
-	if (isatty(0) != (N))\
-		break;\
-} while (0)
 
 #endif
