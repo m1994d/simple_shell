@@ -18,6 +18,18 @@ Then execute the resulting file,for following explanations, the executable file 
 
 The simple_shellis capable of execute any executable file, , if it can be located at any directory of the PATH environment variable `for instance ls, pwd`.
 
+<h2> Compilation </h2>
+
+Your shell will be compiled this way:
+
+`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
+
+<h2> Non interactive mode </h2>
+
+`marlondiaz@MARLON2994:~/holbertonschool-simple_shell$ echo "ls" | ./hsh
+AUTHORS   OFunctions.c  builtin.c          getPath.c  ls      man_simple_shell  shell.h
+Makefile  README.md     functions_shell.c  hsh        main.c  no_builtin.c      shell_cmd.c`
+
 By
 ###### Marlon Andres Diaz 
 ###### Marlon Amado
