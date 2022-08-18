@@ -22,3 +22,47 @@ void GETline(char **line)
 		exit(EXIT_SUCCESS);
 	}
 }
+
+/**
+ * R_spaces - function that removes spaces in the input string
+ * @sll: shell structure
+ */
+
+void R_spaces(sll_t *sll)
+{
+	int i = 0, j = 0;
+
+	while (sll->Command[i])
+	{
+		if (sll->Command[i] != ' ')
+			sll->Command[j++] = sll->Command[i];
+		i++;
+	}
+	sll->Command[j] = '\0';
+}
+
+/**
+ * look_char - function to look up for an specific character
+ * @sll: shell typedef structure
+ * Return: int
+ */
+
+int look_char(sll_t *sll)
+{
+	int index = 0;
+	int flag = 0;
+	char cmp = '/';
+
+	R_spaces(sll);
+
+	while (sll->Command[index])
+	{
+		if (sll->Command[index] == cmp)
+		{
+			flag = 1;
+			return (flag);
+		}
+		index++;
+	}
+	return (flag);
+}
