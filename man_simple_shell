@@ -1,6 +1,9 @@
 .\" Manpage for simple_shell .hsh
-.\" Contact 4718@holbertonstudents.com or daniel.saloo@hotmail.com to correct errors.
-.\" Contact 4740@holbertonstudents.com  to correct errors.
+.\" Contact 4718@holbertonstudents.com or daniel.saloo@hotmail.com
+.\" Contact 4740@holbertonstudents.com  
+.\" Contact 5184@holbertonstudents.com
+.\" to correct errors.
+
 .TH shell 1 "August 19, 2022" "Holberton School - C" "shell man page"
 .SH NAME
 holbertonschool-simple_shell to emulate the basics sh shell.
