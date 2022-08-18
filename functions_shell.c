@@ -5,8 +5,7 @@
  * @s: a Pointer to the string to measure.
  * Return: to the length of the string.
  */
-
-int _strlen(char *s)
+int _strlen(char *str)
 {
 	int i;
 	int len;
