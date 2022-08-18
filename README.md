@@ -26,9 +26,9 @@ Your shell will be compiled this way:
 
 <h2> Non interactive mode </h2>
 
-marlondiaz@MARLON2994:~/holbertonschool-simple_shell$ echo "ls" | ./hsh
+`marlondiaz@MARLON2994:~/holbertonschool-simple_shell$ echo "ls" | ./hsh
 AUTHORS   OFunctions.c  builtin.c          getPath.c  ls      man_simple_shell  shell.h
-Makefile  README.md     functions_shell.c  hsh        main.c  no_builtin.c      shell_cmd.c
+Makefile  README.md     functions_shell.c  hsh        main.c  no_builtin.c      shell_cmd.c`
 
 By
 ###### Marlon Andres Diaz 
