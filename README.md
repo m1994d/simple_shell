@@ -18,11 +18,11 @@ Then execute the resulting file,for following explanations, the executable file 
 
 The simple_shellis capable of execute any executable file, , if it can be located at any directory of the PATH environment variable `for instance ls, pwd`.
 
-<h2> Compilation </h2>
+<h2> Invocation </h2>
 
-Your shell will be compiled this way:
+After compile all .c located in this repository you can call the created shell using:
 
-`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
+`./hsh`
 
 <h2> Non interactive mode </h2>
 
