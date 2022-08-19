@@ -145,6 +145,8 @@ marlondiaz@MARLON2994:~/holbertonschool-simple_shell$
 </details>
 
 By
-| ###### Marlon Andres Diaz |  ###### Marlon Amado |  ###### Daniel Lopez |
+|                 PARTICIPANTS                      |
+-----------------------------------------------------
+| Marlon Andres Diaz | Marlon Amado |  Daniel Lopez |
 
 This site was built for a project of [Holberton School Col](https://www.holbertoncolombia.com/).
