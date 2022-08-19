@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * GETline - function to line the input provided by the user
+ * get_line - function to line the input provided by the user
  * @line: parameter to be read
  */
 
