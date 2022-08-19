@@ -57,6 +57,9 @@ Makefile  README.md     functions_shell.c  hsh        main.c  no_builtin.c      
 
 </details>
 
+<details><summary>Structure in shell.h </summary>
+
+<p>
 <h2> Structure in shell.h </h2>
 
 ```
@@ -74,6 +77,9 @@ typedef struct SLL
 } sll_t;
 
 ```
+</p>
+
+</details>
 
 By
 ###### Marlon Andres Diaz 
