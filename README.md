@@ -21,7 +21,7 @@ simple_shell was coded on Ubuntu 22.04 LTS machine, using the C programming lang
 
 Description
 
-- Simple_Shell is an exercise from Holberton School Colombia to C17. The objective is to make a utility that replicates the functioning of the shell
+- holbertonschool-simple_shell is an exercise from Holberton School Colombia to C18. The objective is to make a utility that replicates the functioning of the shell
 
 </p>
 
