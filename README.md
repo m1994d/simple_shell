@@ -57,6 +57,27 @@ The simple_shellis capable of execute any executable file, , if it can be locate
 
 </details>
 
+<details><summary>Usage</summary>
+
+<p>
+<h2> Example </h2>
+
+When the hsh executable file is run, the hsh prompt will be shown. For this version, prompt is just ($). So, you'll see a screen like the following.
+
+`$`
+
+The prompt is shown until you enter a command. Let's suppose that you're working on a directory with the files `Hello`, `World` and `Hello_world.c`. When you type `ls`, your screen will look like the following
+
+```
+($)ls
+Hello  World  Hello_world.c
+($)
+```
+
+</p>
+
+</details>
+
 <details><summary> Invocation</summary>
 
 <p>
