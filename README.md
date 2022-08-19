@@ -2,6 +2,30 @@
 
 The holbertonstudents-simple_shell program is a recreation of the shell as part of the assignments at the Holberton Colombia School.
 
+<details><summary> Dependences </summary>
+
+<p>
+
+<h2>Dependences</h2>
+
+simple_shell was coded on Ubuntu 22.04 LTS machine, using the C programming language. Test wer compiled using gcc compiler [ gcc (Ubuntu 11.2.0-19ubuntu1) 11.2.0 ]
+
+</p>
+
+</details>
+
+<details><summary> Description </summary>
+
+<p>
+<h2> Description </h2>
+
+Description
+
+- holbertonschool-simple_shell is an exercise from Holberton School Colombia to C18. The objective is to make a utility that replicates the functioning of the shell
+
+</p>
+
+</details>
 
 <details><summary> FLOWCHART </summary>
 
@@ -28,6 +52,27 @@ Then execute the resulting file,for following explanations, the executable file 
 `./hsh`
 
 The simple_shellis capable of execute any executable file, , if it can be located at any directory of the PATH environment variable `for instance ls, pwd`.
+
+</p>
+
+</details>
+
+<details><summary> Example </summary>
+
+<p>
+<h2> Example </h2>
+
+When the hsh executable file is run, the hsh prompt will be shown. For this version, prompt is just ($). So, you'll see a screen like the following.
+
+`$`
+
+The prompt is shown until you enter a command. Let's suppose that you're working on a directory with the files `Hello`, `World` and `Hello_world.c`. When you type `ls`, your screen will look like the following
+
+```
+($)ls
+Hello  World  Hello_world.c
+($)
+```
 
 </p>
 
@@ -132,9 +177,11 @@ marlondiaz@MARLON2994:~/holbertonschool-simple_shell$
 
 </details>
 
-By
-###### Marlon Andres Diaz 
-###### Marlon Amado
-###### Daniel Lopez
+
+|                 collaborators                     | 
+-----------------------------------------------------
+| Marlon Andres Diaz | Marlon Amado |  Daniel Lopez |
 
 This site was built for a project of [Holberton School Col](https://www.holbertoncolombia.com/).
+
+(![holberton-logo](https://user-images.githubusercontent.com/98677728/185634836-323a1152-146f-4a6a-80c1-5a908da5d197.png)
