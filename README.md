@@ -126,7 +126,9 @@ Exits the shell, The STATUS argument is the integer used to exit the shell.
 $ exit
 marlondiaz@MARLON2994:~/holbertonschool-simple_shell$
 ```
+</p>
 
+</details>
 
 By
 ###### Marlon Andres Diaz 
