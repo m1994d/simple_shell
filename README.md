@@ -18,18 +18,29 @@ Then execute the resulting file,for following explanations, the executable file 
 
 The simple_shellis capable of execute any executable file, , if it can be located at any directory of the PATH environment variable `for instance ls, pwd`.
 
+<details><summary>CLICK ME</summary>
+
+<p>
 <h2> Invocation </h2>
 
 After compile all .c located in this repository you can call the created shell using:
 
 `./hsh`
+</p>
 
+</details>
+
+<details><summary>CLICK ME</summary>
+
+<p>
 <h2> Non interactive mode </h2>
 
 `$:~/holbertonschool-simple_shell$ echo "ls" | ./hsh
 AUTHORS   OFunctions.c  builtin.c          getPath.c  ls      man_simple_shell  shell.h
 Makefile  README.md     functions_shell.c  hsh        main.c  no_builtin.c      shell_cmd.c`
+</p>
 
+</details>
 <h2> Structure in shell.h </h2>
 
 <details><summary>CLICK ME</summary>
