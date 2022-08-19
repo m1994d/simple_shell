@@ -29,16 +29,13 @@ char *argv[] __attribute__((unused)), char **envs)
 				exit(EXIT_FAILURE);
 		}
 		get_line(&line); /* Line provided by user*/
-
 		if (_strlen(line) == 1)
 		{
 			free(line);
 			continue;
 		}
-
 		sll = parse_sll(line);
 		free(line);
-
 		if (built_in(sll, envs))
 			continue;
 
