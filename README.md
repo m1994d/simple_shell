@@ -30,6 +30,22 @@ After compile all .c located in this repository you can call the created shell u
 AUTHORS   OFunctions.c  builtin.c          getPath.c  ls      man_simple_shell  shell.h
 Makefile  README.md     functions_shell.c  hsh        main.c  no_builtin.c      shell_cmd.c`
 
+<h2> Structure in shell.h </h2>
+
+|/**
+ * struct SLL - structure to manage the shell
+ * @flags: arguments
+ * @Command: parameter command
+ * @num_flags: number of arguments
+ */
+typedef struct SLL
+{
+	char *Command;
+	char **flags;
+	int num_flags;
+} sll_t;|
+
+
 By
 ###### Marlon Andres Diaz 
 ###### Marlon Amado
