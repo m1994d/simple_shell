@@ -42,7 +42,8 @@ char *argv[] __attribute__((unused)), char **envs)
 		CommandPath = getpath_sll(sll, envPath);
 		if (!CommandPath)
 		{
-			Error_handler(sll, argv);
+			printf("%s: %d: %s: not found\n", argv[0], count, sll->Command);
+			free(CommandPath), ALLfree(sll);
 			continue;
 		}
 		nobuilt_in(sll, CommandPath);
