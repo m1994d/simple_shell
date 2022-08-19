@@ -1,30 +1,12 @@
-build-c90:
-	@gcc -g -Wall -Werror -Wextra -pedantic --std=c90 *.c -o hsh
-	@echo "Buliding c90..."
+#	Compliation Rules 
+#	gcc -Wall -Werror -pedantic -Wextro -g -std=gnu89
 
-build:
-	@gcc -g -Wall -Werror -Wextra -pedantic *.c -o hsh
-	@echo "Buliding..."
+CC = gcc 
+CFLAG = -Wall -Werror -pedantic -Wextra -std=gnu89 -ggdb
 
-run:
-	@gcc -rdynamic -pg -finstrument-functions -g -Wall -Werror -Wextra -pedantic *.c -o hsh
-	@echo "Runing..."
-	@./hsh ; rm -f hsh
+shell:
+	$(CC)$(CFLAG) *.c -o Shell_Beta_V0.4
+	valgrind --leak-check=full ./Shell_Beta_V0.4
 
-valgrind-q:
-	@gcc -rdynamic -pg -finstrument-functions -g -Wall -Werror -Wextra -pedantic *.c -o hsh
-	@valgrind --quiet --leak-check=full --track-origins=yes ./hsh ; rm -f hsh
-#	--trace-children=
-
-valgrind:
-	@gcc -rdynamic -pg -finstrument-functions -g -Wall -Werror -Wextra -pedantic *.c -o hsh
-	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./hsh ; rm -f hsh
-
-gdb:
-	@gcc -rdynamic -pg -finstrument-functions -g -Wall -Werror -Wextra -pedantic *.c -o hsh
-	@gdb ./hsh ; rm -f hsh
-
-gdb-c:
-	@gcc -rdynamic -pg -finstrument-functions -g -Wall -Werror -Wextra -pedantic *.c -o hsh
-	@gdb ./hsh ; rm -f hsh
-	
+clean:
+	rm -r shell_alpha_V0.3
