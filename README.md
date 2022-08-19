@@ -57,7 +57,7 @@ The simple_shellis capable of execute any executable file, , if it can be locate
 
 </details>
 
-<details><summary>Usage</summary>
+<details><summary> Example </summary>
 
 <p>
 <h2> Example </h2>
