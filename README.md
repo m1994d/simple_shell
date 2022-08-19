@@ -2,6 +2,18 @@
 
 The holbertonstudents-simple_shell program is a recreation of the shell as part of the assignments at the Holberton Colombia School.
 
+<details><summary> Dependences </summary>
+
+<p>
+
+<h2>Dependences</h2>
+
+simple_shell was coded on Ubuntu 22.04 LTS machine, using the C programming language. Test wer compiled using gcc compiler [ gcc (Ubuntu 11.2.0-19ubuntu1) 11.2.0 ]
+
+</p>
+
+</details>
+
 <details><summary> Description </summary>
 
 <p>
@@ -144,8 +156,8 @@ marlondiaz@MARLON2994:~/holbertonschool-simple_shell$
 
 </details>
 
-By
-|                 PARTICIPANTS                      |
+
+|                 collaborators                     | 
 -----------------------------------------------------
 | Marlon Andres Diaz | Marlon Amado |  Daniel Lopez |
 
