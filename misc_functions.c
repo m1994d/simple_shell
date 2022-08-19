@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * look_for_path - search the path on the env
