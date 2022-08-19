@@ -33,9 +33,10 @@ void new_signal_handler(int pid __attribute__((unused)));
 char *getpath_sll(sll_t *sll, char *envPath);
 int nobuilt_in(sll_t *sll, char *CommandPath);
 int built_in(sll_t *sll, char **envs);
+void R_spaces(sll_t *sll);
 int look_char(sll_t *sll);
-int look_char(sll_t *sll);
-void GETline(char **line);
+void get_line(char **line);
+void Error_handler(sll_t *sll, char **argv);
 
 int _strlen(const char *str);
 char *_strconcat(char *s1, char *s2, char *s3);

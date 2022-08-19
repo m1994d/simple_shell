@@ -5,8 +5,7 @@
  * @line: parameter to be read
  */
 
-void GETline(char **line)
-
+void get_line(char **line)
 {
 	size_t len = 0;
 	ssize_t nread = 0;
@@ -59,7 +58,7 @@ int look_char(sll_t *sll)
 	{
 		if (sll->Command[index] == cmp)
 		{
-			flag = 1;
+			flag = true;
 			return (flag);
 		}
 		index++;

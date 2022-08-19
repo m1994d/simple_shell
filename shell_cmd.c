@@ -36,7 +36,6 @@ void ALLfree(sll_t *sll)
 int flagsCOUNT(char *input)
 {
 	int count = 0;
-
 	char *dup = _strdup(input);		/*Duplicate the "input" variable*/
 	char *token = strtok(dup, " "); /*the function strtok() modified*/
 
@@ -97,6 +96,7 @@ sll_t *parse_sll(char *input)
 	if (sll->num_flags == 0)
 	{
 		sll->Command = _strdup(input);
+		look_char(sll);
 		return (sll);
 	}
 	token = strtok(input, " "); /*Input: ls -l -a -b*/
@@ -110,6 +110,8 @@ sll_t *parse_sll(char *input)
 
 		token = strtok(NULL, " ");
 	}
+
+	look_char(sll);
 	return (sll);
 }
 /**

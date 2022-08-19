@@ -7,8 +7,6 @@
  */
 int built_in(sll_t *sll, char **envs)
 {
-	look_char(sll);
-
 	if (_strcmp(sll->Command, "exit") == 0)
 	{
 		ALLfree(sll);
@@ -34,4 +32,24 @@ int built_in(sll_t *sll, char **envs)
 	}
 
 	return (0);
+}
+
+/**
+ * Error_handler - function that handles errors
+ * @cmd: input command
+ * @argv: arguments from the terminal
+ */
+
+void Error_handler(sll_t *sll, char **argv)
+{
+	char *message = NULL, *commandPath = NULL;
+	int count = 0;
+
+	message = malloc(sizeof(char) * 100);
+	sprintf(message, "%s: %d: %s: not found\n", argv[0], count, sll->Command);
+	write(STDERR_FILENO, message, _strlen(message));
+
+	free(commandPath), ALLfree(sll), free(message);
+	if (isatty(STDIN_FILENO) != 1)
+		exit(127);
 }

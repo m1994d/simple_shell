@@ -28,7 +28,14 @@ char *argv[] __attribute__((unused)), char **envs)
 			if (write(STDOUT_FILENO, "$ ", 2) == EOF) /* print the prompt*/
 				exit(EXIT_FAILURE);
 		}
-		GETline(&line); /* Line provided by user*/
+		get_line(&line); /* Line provided by user*/
+
+		if (_strlen(line) == 1)
+		{
+			free(line);
+			continue;
+		}
+
 		sll = parse_sll(line);
 		free(line);
 
@@ -38,8 +45,7 @@ char *argv[] __attribute__((unused)), char **envs)
 		CommandPath = getpath_sll(sll, envPath);
 		if (!CommandPath)
 		{
-			printf("%s: %d: %s: not found\n", argv[0], count, sll->Command);
-			free(CommandPath), ALLfree(sll);
+			Error_handler(sll, argv);
 			continue;
 		}
 		nobuilt_in(sll, CommandPath);
