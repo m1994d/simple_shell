@@ -2,6 +2,18 @@
 
 The holbertonstudents-simple_shell program is a recreation of the shell as part of the assignments at the Holberton Colombia School.
 
+<details><summary> Description </summary>
+
+<p>
+<h2> Description </h2>
+
+Description
+
+- Simple_Shell is an exercise from Holberton School Colombia to C17. The objective is to make a utility that replicates the functioning of the shell
+
+</p>
+
+</details>
 
 <details><summary> FLOWCHART </summary>
 
@@ -133,8 +145,6 @@ marlondiaz@MARLON2994:~/holbertonschool-simple_shell$
 </details>
 
 By
-###### Marlon Andres Diaz 
-###### Marlon Amado
-###### Daniel Lopez
+| ###### Marlon Andres Diaz |  ###### Marlon Amado |  ###### Daniel Lopez |
 
 This site was built for a project of [Holberton School Col](https://www.holbertoncolombia.com/).
