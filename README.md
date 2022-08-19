@@ -32,7 +32,10 @@ Makefile  README.md     functions_shell.c  hsh        main.c  no_builtin.c      
 
 <h2> Structure in shell.h </h2>
 
-|/**
+<details><summary>CLICK ME</summary>
+
+<p>
+
  * struct SLL - structure to manage the shell
  * @flags: arguments
  * @Command: parameter command
@@ -40,12 +43,15 @@ Makefile  README.md     functions_shell.c  hsh        main.c  no_builtin.c      
  */
 typedef struct SLL
 {
-	char *Command;
-	char **flags;
-	int num_flags;
-} sll_t;|
+        char *Command;
+        char **flags;
+        int num_flags;
+} sll_t;
 
+</p>
 
+</details>
+ 
 By
 ###### Marlon Andres Diaz 
 ###### Marlon Amado
