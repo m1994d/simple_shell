@@ -4,7 +4,7 @@ The holbertonstudents-simple_shell program is a recreation of the shell as part 
 
 <h2> FLOWCHART </h2>
 
-(![164135193-62dd3e0d-c257-45d5-952e-1c02f8be8d8f](https://user-images.githubusercontent.com/98677728/185253413-a72ddf64-30f8-4548-8f5f-6c01b21be478.jpg)
+(![164135193-62dd3e0d-c257-45d5-952e-1c02f8be8d8f](https://github.com/m1994d/holbertonschool-simple_shell/blob/main/images/Flow_chart_shell.png)
 
 <h2> USAGE </h2>
 
@@ -26,7 +26,7 @@ Your shell will be compiled this way:
 
 <h2> Non interactive mode </h2>
 
-`marlondiaz@MARLON2994:~/holbertonschool-simple_shell$ echo "ls" | ./hsh
+`$:~/holbertonschool-simple_shell$ echo "ls" | ./hsh
 AUTHORS   OFunctions.c  builtin.c          getPath.c  ls      man_simple_shell  shell.h
 Makefile  README.md     functions_shell.c  hsh        main.c  no_builtin.c      shell_cmd.c`
 
