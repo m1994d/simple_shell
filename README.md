@@ -183,3 +183,5 @@ marlondiaz@MARLON2994:~/holbertonschool-simple_shell$
 | Marlon Andres Diaz | Marlon Amado |  Daniel Lopez |
 
 This site was built for a project of [Holberton School Col](https://www.holbertoncolombia.com/).
+
+(![holberton-logo](https://user-images.githubusercontent.com/98677728/185634836-323a1152-146f-4a6a-80c1-5a908da5d197.png)
