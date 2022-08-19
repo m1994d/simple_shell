@@ -36,7 +36,7 @@ int built_in(sll_t *sll, char **envs)
 
 /**
  * Error_handler - function that handles errors
- * @cmd: input command
+ * @sll: input command
  * @argv: arguments from the terminal
  */
 
