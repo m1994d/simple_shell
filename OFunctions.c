@@ -12,14 +12,7 @@ void get_line(char **line)
 
 	nread = getline(line, &len, stdin);
 	if (nread == EOF)
-	{
-		if (isatty(STDIN_FILENO) != 0)
-			write(STDOUT_FILENO, "\n", 1);
-		if (*line)
-			free(*line);
-
 		exit(EXIT_SUCCESS);
-	}
 }
 
 /**
