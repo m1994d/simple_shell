@@ -1,85 +1,52 @@
 #include "shell.h"
-
 /**
- * main - simple shell
- * @argc: argument counter
- * @argv: arguments
- * Return: 0
+ * main - build a shell
+ * @argc: number of arguments
+ * @argv: pointer to the address of arguments
+ * @envs: environment
+ * Return: int
  */
-
-int main(int argc, char **argv)
-{
-	char *line = NULL, **tokenized = NULL;
-	int (*func_builtin)(char **);
-	int tty = 1, status = 1;
-
-
-	signal(SIGINT, ctrl_c);
-
-	if (isatty(STDIN_FILENO) == 0)
-		tty = 0;
-
-	do {
-		if (tty == 1)
-			write(STDOUT_FILENO, SIGN_S, _strlen(SIGN_S));
-		fflush(stdin);
-		/* READ */
-		line = read_line();
-		/* TOKEN INPUT */
-		tokenized = tokenize_line(line);
-		/*Built-in || No-Built-In*/
-		if (tokenized[0])
-			func_builtin = is_built_in(tokenized);
-		else
-		{
-			free_elements(line, tokenized);
-			continue;
-		}
-		/*Execute*/
-		if (func_builtin == NULL)
-			status = check_exec(tokenized, argc, argv, tty, line);
-		else
-			status = func_builtin(tokenized);
-		free_elements(line, tokenized);
-	} while (status);
-
-	return (0);
-}
-
-/**
- * read_line - reads the line
- * Return: string of arguments
- */
-
-char *read_line(void)
+int main(int argc __attribute__((unused)),
+char *argv[] __attribute__((unused)), char **envs)
 {
 	char *line = NULL;
-	size_t len = 0;
+	int count = 0;
+	char *CommandPath = NULL, *envPath;
+	sll_t *sll;
 
-	if (getline(&line, &len, stdin) == -1)
+	envPath = getenv("PATH");
+	signal(SIGINT, new_signal_handler); /*SIGINT = Interrupt the process*/
+
+	while (true)
 	{
-		if (feof(stdin))
+		line = NULL;
+		CommandPath = NULL;
+		count++;
+
+		if (isatty(STDIN_FILENO) == 1)
+		{
+			if (write(STDOUT_FILENO, "$ ", 2) == EOF) /* print the prompt*/
+				exit(EXIT_FAILURE);
+		}
+		get_line(&line); /* Line provided by user*/
+		if (_strlen(line) == 1)
 		{
 			free(line);
-			exit(EXIT_SUCCESS);
+			continue;
 		}
-		else
+		sll = parse_sll(line);
+		free(line);
+		if (built_in(sll, envs))
+			continue;
+
+		CommandPath = getpath_sll(sll, envPath);
+		if (!CommandPath)
 		{
-			perror("readline");
-			exit(EXIT_FAILURE);
+			Error_handler(sll, argv);
+			continue;
 		}
+		nobuilt_in(sll, CommandPath);
+		free(CommandPath), ALLfree(sll);
 	}
-	return (line);
-}
-
-/**
- * ctrl_c - handles the ctrl+c signal
- * @sig: signal
- */
-
-void ctrl_c(int sig)
-{
-	(void)sig;
-	_putchar('\n');
-	write(STDOUT_FILENO, SIGN_S, _strlen(SIGN_S));
+	return (EXIT_SUCCESS);
 }
