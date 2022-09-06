@@ -171,7 +171,7 @@ Exits the shell, The STATUS argument is the integer used to exit the shell.
 
 ```
 $ exit
-marlondiaz@MARLON2994:~/holbertonschool-simple_shell$
+marlondiaz@MARLON2994:~/simple_shell$
 ```
 </p>
 
@@ -181,7 +181,3 @@ marlondiaz@MARLON2994:~/holbertonschool-simple_shell$
 |                 collaborators                     | 
 -----------------------------------------------------
 | Marlon Andres Diaz | Marlon Amado |  Daniel Lopez |
-
-This site was built for a project of [Holberton School Col](https://www.holbertoncolombia.com/).
-
-(![holberton-logo](https://user-images.githubusercontent.com/98677728/185634836-323a1152-146f-4a6a-80c1-5a908da5d197.png)
